@@ -1,0 +1,105 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2022-04-12T08:27:16.893Z",
+    "end": "2022-04-12T08:27:18.157Z",
+    "duration": 1264,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "b2d2e184-7f50-4dc3-9d6c-93ed449d7380",
+      "title": "",
+      "fullFile": "cypress/integration/googleBooksPassingTest.spec.js",
+      "file": "cypress/integration/googleBooksPassingTest.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "df7e12db-d8b3-499a-817c-17a5e56703b5",
+          "title": "Passing test for access to a book",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "should return a book with corresponding ID",
+              "fullTitle": "Passing test for access to a book should return a book with corresponding ID",
+              "timedOut": null,
+              "duration": 986,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.GetBook('TWKQPwAACAAJ').as('response');\ncy.get('@response').should(resp => {\n  expect(resp.status).to.eql(200);\n  expect(resp.body).to.not.be.null;\n  expect(resp.body.id).to.eql(\"TWKQPwAACAAJ\");\n  expect(resp.body.volumeInfo.title).to.eql(\"Fondation\");\n  expect(resp.body.volumeInfo.authors[0]).to.eql(\"Isaac Asimov\");\n});",
+              "err": {},
+              "uuid": "59d46820-5471-4e84-b026-5c5f8a9c3032",
+              "parentUUID": "df7e12db-d8b3-499a-817c-17a5e56703b5",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "59d46820-5471-4e84-b026-5c5f8a9c3032"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 986,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
